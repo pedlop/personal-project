@@ -4,11 +4,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
-import { PaginaNotFoundComponent } from './pagina-not-found/pagina-not-found.component';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 
-import { HeaderModule } from './shared/header/header.module';
+import { HeaderModule } from './header/header.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { TarefaModule } from './tarefas/tarefa.module';
+import { AutenticarModule } from './shared/autenticar/autenticar.module';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -16,7 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     PaginaInicialComponent,
-    PaginaNotFoundComponent
+    PaginaNaoEncontradaComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderModule,
     FooterModule,
     TarefaModule,
+    AutenticarModule,
     AppRoutingModule
   ],
   providers: [],
