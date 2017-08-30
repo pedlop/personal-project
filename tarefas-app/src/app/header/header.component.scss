@@ -1,0 +1,13 @@
+.navbar {
+    img {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 630px) {
+    .navbar {
+        img {
+            max-width: 40%;
+        }
+    }
+}
