@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { TarefaComponent } from './tarefa/tarefa.component';
 import { TarefaCadastrarComponent } from './tarefa-cadastrar/tarefa-cadastrar.component';
+import { AutenticarGuard } from './../shared/autenticar/shared/autenticar.guard';
 
 const routes: Routes = [
     {
@@ -11,7 +12,8 @@ const routes: Routes = [
     },
     {
         path: 'cadastrar/tarefa',
-        component: TarefaCadastrarComponent
+        component: TarefaCadastrarComponent,
+        canActivate: [AutenticarGuard]
     }
 ];
 @NgModule({
