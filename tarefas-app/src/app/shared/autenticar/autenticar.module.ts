@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { EntrarComponent } from './entrar/entrar.component';
 import { RegistrarComponent } from './registrar/registrar.component';
@@ -11,7 +11,7 @@ import { AutenticarService } from './shared/autenticar.service';
   declarations: [EntrarComponent, RegistrarComponent],
   imports: [
     CommonModule,
-    FormsModule,
+    ReactiveFormsModule,
     AutenticarRoutingModule
   ],
   exports: [EntrarComponent, RegistrarComponent],
