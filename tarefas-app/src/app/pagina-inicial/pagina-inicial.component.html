@@ -1,5 +1,14 @@
 <div class="container">
-  <p>
-    pagina-inicial works!
-  </p>
+  <div class="col-md-6 col-md-offset-3">
+    <h1>Olá {{usuarioAtual?.nome}} {{usuarioAtual?.sobrenome}}!</h1>
+    <p>Você está logado no UFG-EXAMPLE!!</p>
+    <h3>Todos os usuários cadastrados:</h3>
+    <ul>
+      <li *ngFor="let usuario of usuarios">
+          {{usuario.username}} ({{usuario.nome}} {{usuario.sobrenome}})
+        - <a (click)="deletarUsuario(usuario.id)"> Delete</a>
+      </li>
+    </ul>
+    <button class="btn btn-primary" (click)="logout()">Logout</button>
+  </div>
 </div>

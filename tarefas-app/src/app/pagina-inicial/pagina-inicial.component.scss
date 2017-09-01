@@ -1,0 +1,9 @@
+a {
+    cursor: pointer;
+    &:hover {
+        background-color: yellow;
+    }
+}
+button {
+    cursor: pointer;
+}
