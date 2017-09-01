@@ -10,7 +10,7 @@ const routes: Routes = [
         component: EntrarComponent
     },
     {
-        path: 'resgistrar',
+        path: 'registrar',
         component: RegistrarComponent
     }
 ];
