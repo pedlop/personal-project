@@ -10,27 +10,27 @@ export class PerfilUsuarioService {
 
   getTodosUsuarios() {
     return this.http.get('/api/usuarios', this.jwt())
-    .map((res: Response) => res.json());
+    .map((response: Response) => response.json());
   }
 
   getUsuarioPeloId(id: number) {
     return this.http.get('/api/usuarios/' + id, this.jwt())
-    .map((res: Response)=> res.json());
+    .map((response: Response) => response.json());
   }
 
   criar(usuario: Usuario) {
     return this.http.post('/api/usuarios', usuario, this.jwt())
-    .map((res: Response) => res.json());
+    .map((response: Response) => response.json());
   }
 
   alterar(usuario: Usuario) {
     return this.http.put('/api/usuarios', usuario, this.jwt())
-    .map((res: Response) => res.json());
+    .map((response: Response) => response.json());
   }
 
   deletar(id: number) {
     return this.http.delete('/api/usuarios/' + id, this.jwt())
-    .map((res: Response) => res.json());
+    .map((response: Response) => response.json());
   }
 
   private jwt() {
