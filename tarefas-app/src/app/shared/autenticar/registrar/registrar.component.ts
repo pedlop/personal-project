@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { PerfilUsuarioService } from './../../perfil-usuario/shared/perfil-usuario.service';
 import { ToastService } from './../../toast/toast.service';
+import { Usuario } from './../../perfil-usuario/shared/usuario.model';
 
 @Component({
   selector: 'ufg-registrar',
@@ -12,9 +14,10 @@ import { ToastService } from './../../toast/toast.service';
 export class RegistrarComponent implements OnInit {
 
   registrarForm: FormGroup;
+  usuario: Usuario;
 
   constructor(private formBuilder: FormBuilder, private perfilUsuarioService: PerfilUsuarioService,
-              private toastService: ToastService) { }
+              private toastService: ToastService, private router: Router) { }
 
   ngOnInit() {
     this.registrarForm = this.formBuilder.group({
@@ -26,20 +29,26 @@ export class RegistrarComponent implements OnInit {
   }
 
   onClickRegistrar() {
-    this.perfilUsuarioService.criar(
-      this.registrarForm.controls.nome.value,
-      this.registrarForm.controls.sobrenome.value,
-      this.registrarForm.controls.username.value,
-      this.registrarForm.controls.senha.value
-    ).subscribe(
+    this.pegarDadosUsuario();
+    this.perfilUsuarioService.criar(this.usuario).subscribe(
       data => {
         this.toastService.sucesso('Sucesso', 'Você foi registrado');
+        this.router.navigate(['/login']);
       },
       err => {
         this.toastService.erro('', err);
         console.log(err);
       }
     );
+  }
+
+  private pegarDadosUsuario() {
+    this.usuario = {
+      nome: this.registrarForm.controls.nome.value,
+      sobrenome: this.registrarForm.controls.sobrenome.value,
+      username: this.registrarForm.controls.username.value,
+      senha: this.registrarForm.controls.senha.value
+    }
   }
 
 }

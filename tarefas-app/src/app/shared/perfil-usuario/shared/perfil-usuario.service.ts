@@ -18,14 +18,8 @@ export class PerfilUsuarioService {
     .map((res: Response)=> res.json());
   }
 
-  criar(nome: string, sobrenome: string, username: string, senha: string) {
-    return this.http.post('/api/usuarios',
-    {
-      nome: nome,
-      sobrenome: sobrenome,
-      username: username,
-      senha: senha
-    }, this.jwt())
+  criar(usuario: Usuario) {
+    return this.http.post('/api/usuarios', usuario, this.jwt())
     .map((res: Response) => res.json());
   }
 
