@@ -8,7 +8,7 @@ export class ToastService {
 
   constructor() {
     this.options = {
-      "closeButton": false,
+      "closeButton": true,
       "debug": false,
       "newestOnTop": false,
       "progressBar": false,
