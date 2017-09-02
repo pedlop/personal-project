@@ -22,13 +22,11 @@ export class EntrarComponent implements OnInit {
     this.entrarForm = this.formBuilder.group({
       username: ['', Validators.required],
       senha: ['', Validators.required]
-    })
+    });
   }
 
   onClickEntrar() {
     this.mostrarLoading();
-    console.log(this.entrarForm.controls.username.value);
-    console.log(this.entrarForm.controls.senha.value);
     this.autenticarService.login(
       this.entrarForm.controls.username.value,
       this.entrarForm.controls.senha.value
@@ -40,7 +38,7 @@ export class EntrarComponent implements OnInit {
       err => {
         this.toast.erro('', err);
       }
-    )
+    );
     
     
   }
