@@ -14,7 +14,7 @@ import { Usuario } from './../../perfil-usuario/shared/usuario.model';
 export class RegistrarComponent implements OnInit {
 
   registrarForm: FormGroup;
-  usuario: Usuario;
+  private usuario: Usuario;
 
   constructor(private formBuilder: FormBuilder, private perfilUsuarioService: PerfilUsuarioService,
               private toastService: ToastService, private router: Router) { }
@@ -29,7 +29,7 @@ export class RegistrarComponent implements OnInit {
   }
 
   onClickRegistrar() {
-    this.pegarDadosUsuario();
+    this.dadosUsuario();
     this.perfilUsuarioService.criar(this.usuario).subscribe(
       data => {
         this.toastService.sucesso('Sucesso', 'Você foi registrado');
@@ -42,7 +42,7 @@ export class RegistrarComponent implements OnInit {
     );
   }
 
-  private pegarDadosUsuario() {
+  private dadosUsuario() {
     this.usuario = {
       nome: this.registrarForm.controls.nome.value,
       sobrenome: this.registrarForm.controls.sobrenome.value,
