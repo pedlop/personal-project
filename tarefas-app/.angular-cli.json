@@ -20,11 +20,11 @@
       "prefix": "ufg",
       "styles": [
         "styles.scss",
-        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/toastr/toastr.scss"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/tether/dist/js/tether.js",
         "../node_modules/toastr/toastr.js"        
       ],
