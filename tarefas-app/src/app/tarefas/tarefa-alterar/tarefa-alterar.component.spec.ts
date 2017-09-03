@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TarefaComponent } from './tarefa.component';
+import { TarefaAlterarComponent } from './tarefa-alterar.component';
 
-describe('TarefaComponent', () => {
-  let component: TarefaComponent;
-  let fixture: ComponentFixture<TarefaComponent>;
+describe('TarefaAlterarComponent', () => {
+  let component: TarefaAlterarComponent;
+  let fixture: ComponentFixture<TarefaAlterarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TarefaComponent ]
+      declarations: [ TarefaAlterarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TarefaComponent);
+    fixture = TestBed.createComponent(TarefaAlterarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
