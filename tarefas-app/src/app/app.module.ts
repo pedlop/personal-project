@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 
 // usado para criar o fake backend
-import { fakeUserBackendProvider } from './../_server/index';
+import { fakeBackendProvider } from './../_server/index';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
 
@@ -28,6 +29,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     ToastModule,
     HeaderModule,
@@ -39,7 +41,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   providers: [
     // 'providers' usados para criar o 'fake backend'
-    fakeUserBackendProvider,
+    fakeBackendProvider,
     MockBackend,
     BaseRequestOptions
   ],
