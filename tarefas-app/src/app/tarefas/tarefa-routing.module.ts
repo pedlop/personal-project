@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TarefaComponent } from './tarefa/tarefa.component';
+import { TarefaAlterarComponent } from './tarefa-alterar/tarefa-alterar.component';
 import { TarefaCadastrarComponent } from './tarefa-cadastrar/tarefa-cadastrar.component';
 import { AutenticarGuard } from './../shared/autenticar/shared/autenticar.guard';
 
 const routes: Routes = [
     {
         path: 'tarefa/:id',
-        component: TarefaComponent
+        component: TarefaAlterarComponent
     },
     {
         path: 'cadastrar/tarefa',
