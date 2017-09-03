@@ -1,57 +1,48 @@
-<section class="jumbotron text-center">
-  <div class="container">
-    <h1 class="jumbotron-heading">Album example</h1>
-    <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-    <p>
-      <a href="#" class="btn btn-primary">Main call to action</a>
-      <a href="#" class="btn btn-secondary">Secondary action</a>
-    </p>
-  </div>
-</section>
-
-<div class="album text-muted">
-  <div class="container">
-
-    <div class="row">
-      <div class="col-4 card">
-        <img src="http://via.placeholder.com/356x280" alt="Card image cap">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="col-4 card">
-        <img src="http://via.placeholder.com/356x280" alt="Card image cap">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="col-4 card">
-        <img src="http://via.placeholder.com/356x280" alt="Card image cap">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-
-      <div class="col-4 card">
-        <img src="http://via.placeholder.com/356x280" alt="Card image cap">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="col-4 card">
-        <img src="http://via.placeholder.com/356x280" alt="Card image cap">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="col-4 card">
-        <img src="http://via.placeholder.com/356x280" alt="Card image cap">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-
-      <div class="col-4 card">
-        <img src="http://via.placeholder.com/356x280" alt="Card image cap">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="col-4 card">
-        <img src="http://via.placeholder.com/356x280" alt="Card image cap">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="col-4 card">
-        <img src="http://via.placeholder.com/356x280" alt="Card image cap">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h2>Cadastrar Tarefa:</h2>
+      <form [formGroup]="tarefaForm" novalidate (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Título" formControlName="titulo">
+        </div>
+        <div class="form-group">
+          <textarea type="text" class="form-control" placeholder="Descrição" formControlName="descricao"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="tarefaForm.invalid">Cadastrar Tarefa</button>
+      </form>
     </div>
+    <div class="col-6">
+      <h2>Tarefas Cadastradas:</h2>
+      <ul>
+        <li *ngFor="let tarefa of tarefas">
+        {{tarefa.titulo}} - <a (click)="removerTarefa(tarefa.id)">Remover</a> - 
+        <a class="alterar" (click)="abrirModal(template)">Alterar</a>
 
+        <ng-template #template>
+          <div class="modal-header">
+            <h4 class="modal-title pull-left">Alterar tarefa {{tarefa.id}}</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="esconderModal()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="alteraForm" novalidate (ngSubmit)="alterarTarefa(tarefa.id)">
+              <div class="form-group">
+                <label>Novo Título:</label>
+                <input type="text" class="form-control" placeholder="{{tarefa.titulo}}" formControlName="titulo">
+              </div>
+              <div class="form-group">
+                <label>Nova Descrição:</label>
+                <textarea class="form-control" placeholder="{{tarefa.descricao}}" formControlName="descricao"></textarea>
+              </div>
+              <button class="btn btn-primary" [disabled]="alteraForm.invalid">Alterar Tarefa</button>
+            </form>
+          </div>
+        </ng-template>
+
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
