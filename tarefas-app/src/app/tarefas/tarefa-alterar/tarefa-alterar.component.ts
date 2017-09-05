@@ -26,19 +26,9 @@ export class TarefaAlterarComponent implements OnInit {
     });
   }
 
- /* alterarTarefa(id: number) {
-    this.dadosTarefa();
-    this.tarefaService.alterar(id).subscribe(
-      data => {
-        this.toast.sucesso('', 'Tarefa Alterada com sucesso.');
-        console.log(data);
-        
-      },
-      err => {
-        this.toast.erro('', err);
-      }
-    )
-  } */
+  alterarTarefa() {
+    
+  } 
 
   private dadosTarefa() {
 
