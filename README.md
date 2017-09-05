@@ -12,7 +12,7 @@ Para o desenvolvimento do projeto serão utilizadas ferramentas para auxiliar na
 
 **Linguagem de Programação & Frameworks:**
 - [Angular 4](https://angular.io/) - _Framework JavaScript open-source, mantido pelo Google, que auxilia na execução de single-page applications._
-- [Bootstrap]() - _._
+- [Bootstrap](http://getbootstrap.com/) - _Build responsive, mobile-first projects on the web with the world's most popular front-end component library._
 - [ngx-bootstrap](http://valor-software.com/ngx-bootstrap/) - _Native Angular widgets for Bootstrap 3 and Bootstrap._
 - [toastr](http://codeseven.github.io/toastr/) - _Simple javascript toast notifications._
 
