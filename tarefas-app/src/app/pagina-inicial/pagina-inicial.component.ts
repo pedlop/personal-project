@@ -6,7 +6,7 @@ import { ToastService } from './../shared/toast/toast.service';
 import { AutenticarService } from './../shared/autenticar/shared/autenticar.service';
 
 @Component({
-  selector: 'ufg-pagina-inicial',
+  selector: 'plop-pagina-inicial',
   templateUrl: './pagina-inicial.component.html',
   styleUrls: ['./pagina-inicial.component.scss']
 })

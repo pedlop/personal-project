@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ufg-perfil-usuario',
+  selector: 'plop-perfil-usuario',
   templateUrl: './perfil-usuario.component.html',
   styleUrls: ['./perfil-usuario.component.scss']
 })

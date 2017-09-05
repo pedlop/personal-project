@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ufg-header',
+  selector: 'plop-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

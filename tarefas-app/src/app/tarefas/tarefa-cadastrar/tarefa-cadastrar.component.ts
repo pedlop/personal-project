@@ -8,7 +8,7 @@ import { BsModalService, BsModalRef } from "ngx-bootstrap/modal";
 import { trigger, transition, style, animate } from "@angular/animations";
 
 @Component({
-  selector: 'ufg-tarefa-cadastrar',
+  selector: 'plop-tarefa-cadastrar',
   templateUrl: './tarefa-cadastrar.component.html',
   styleUrls: ['./tarefa-cadastrar.component.scss'],
   animations: [

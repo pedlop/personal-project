@@ -6,7 +6,7 @@ import { AutenticarService } from './../shared/autenticar.service';
 import { ToastService } from './../../toast/toast.service';
 
 @Component({
-  selector: 'ufg-entrar',
+  selector: 'plop-entrar',
   templateUrl: './entrar.component.html',
   styleUrls: ['./entrar.component.scss']
 })

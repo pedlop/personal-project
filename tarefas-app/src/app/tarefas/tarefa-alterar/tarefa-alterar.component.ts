@@ -5,7 +5,7 @@ import { TarefaService } from './../shared/tarefa.service';
 import { ToastService } from './../../shared/toast/toast.service';
 
 @Component({
-  selector: 'ufg-tarefa-alterar',
+  selector: 'plop-tarefa-alterar',
   templateUrl: './tarefa-alterar.component.html',
   styleUrls: ['./tarefa-alterar.component.scss']
 })

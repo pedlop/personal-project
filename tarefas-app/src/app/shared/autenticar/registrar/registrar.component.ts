@@ -7,7 +7,7 @@ import { ToastService } from './../../toast/toast.service';
 import { Usuario } from './../../perfil-usuario/shared/usuario.model';
 
 @Component({
-  selector: 'ufg-registrar',
+  selector: 'plop-registrar',
   templateUrl: './registrar.component.html',
   styleUrls: ['./registrar.component.scss']
 })
