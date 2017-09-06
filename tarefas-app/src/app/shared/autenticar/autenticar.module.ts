@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EntrarComponent } from './entrar/entrar.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { AutenticarRoutingModule } from './autenticar-routing.module';
+import { FormControlErrorModule } from './../form-control-error/form-control-error.module';
 import { AutenticarService } from './shared/autenticar.service';
 
 @NgModule({
@@ -12,7 +13,8 @@ import { AutenticarService } from './shared/autenticar.service';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    AutenticarRoutingModule
+    AutenticarRoutingModule,
+    FormControlErrorModule
   ],
   exports: [EntrarComponent, RegistrarComponent],
   providers: [AutenticarService]

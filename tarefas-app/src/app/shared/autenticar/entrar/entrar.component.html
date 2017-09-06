@@ -1,8 +1,12 @@
 <div class="container">
   <form [formGroup]="entrarForm" novalidate (ngSubmit)="onClickEntrar()">
-    <div class="form-group">
+    <div class="form-group" [ngClass]="aplicaCssErro('username')">
       <label for="username">Usuario</label>
       <input type="text" class="form-control" placeholder="Usuario" formControlName="username">
+      <plop-form-control-error 
+        [mostrarErro]="verificaValidTouched('username')"
+        msgErro="Username é obrigatório.">
+      </plop-form-control-error>
     </div>
     <div class="form-group">
         <label for="senha">Senha</label>

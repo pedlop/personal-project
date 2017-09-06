@@ -43,6 +43,21 @@ export class EntrarComponent implements OnInit {
     
   }
 
+  verificaValidTouched(campo: string) {
+
+    return (
+      !this.entrarForm.get(campo).valid && 
+      (this.entrarForm.get(campo).touched || this.entrarForm.get(campo).dirty)
+    );
+  }
+
+  aplicaCssErro(campo: string) {
+    return {
+      'has-error': this.verificaValidTouched(campo),
+      'has-feedback': this.verificaValidTouched(campo)
+    }
+  }
+
   private mostrarLoading() {
     this.loading = true;
   }
