@@ -18,6 +18,7 @@ import { FooterModule } from './shared/footer/footer.module';
 import { TarefaModule } from './tarefas/tarefa.module';
 import { AutenticarModule } from './shared/autenticar/autenticar.module';
 import { PerfilUsuarioModule } from './shared/perfil-usuario/perfil-usuario.module';
+import { FormControlErrorModule } from './shared/form-control-error/form-control-error.module';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -37,6 +38,7 @@ import { AppRoutingModule } from './app-routing.module';
     TarefaModule,
     AutenticarModule,
     PerfilUsuarioModule,
+    FormControlErrorModule,
     AppRoutingModule
   ],
   providers: [
