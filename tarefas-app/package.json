@@ -1,6 +1,8 @@
 {
   "name": "tarefas-app",
   "version": "0.0.0",
+  "author": "Pedro Victor Lopes",
+  "email": "pedro_victor28@hotmail.com",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
